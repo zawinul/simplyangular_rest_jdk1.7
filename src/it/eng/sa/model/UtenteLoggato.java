@@ -1,6 +1,8 @@
 package it.eng.sa.model;
 
-public class UtenteLoggato {
+import it.eng.sa.model.lib.Model;
+
+public class UtenteLoggato extends Model{
 	public String cid;
 	public String name;
 	public String role;

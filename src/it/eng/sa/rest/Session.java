@@ -15,6 +15,8 @@ import javax.ws.rs.core.MediaType;
 import it.eng.sa.model.ClientConfiguration;
 import it.eng.sa.model.Configuration;
 import it.eng.sa.model.UtenteLoggato;
+import it.eng.sa.rest.lib.Amministratore;
+import it.eng.sa.web.AuthenticationFilter;
 import it.eng.sa.web.ConfigurationHelper;
 import it.eng.sa.web.SessionManager;
 
@@ -38,6 +40,14 @@ public class Session   {
 		return conf;
 	}
 	
+
+	@GET
+    @Produces(MediaType.TEXT_PLAIN)
+	@Path("token")
+    public String getToken() throws Exception {
+		return AuthenticationFilter.getToken(request);
+	}
+
 	@GET
     @Produces(MediaType.TEXT_PLAIN) 
 	@Path("logout")
@@ -68,5 +78,14 @@ public class Session   {
 		public String user;
 		public String password;
 	}
+
+	@GET
+    @Produces(MediaType.TEXT_PLAIN)
+	@Path("prova")
+	@Amministratore
+    public String prova() throws Exception {
+		return "ci sei riuscito";
+	}
+
 
 }

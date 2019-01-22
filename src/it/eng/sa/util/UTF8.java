@@ -88,5 +88,13 @@ public class UTF8 {
 		return org.apache.commons.codec.digest.DigestUtils.md5Hex(bytes);
 	}
 	
+	public static byte[] md5Bytes(String x) {
+		return md5Bytes(bytes(x));
+	}
+
+	public static byte[] md5Bytes(byte bytes[]) {
+		return org.apache.commons.codec.digest.DigestUtils.md5(bytes);
+	}
+	
 
 }

@@ -22,6 +22,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class ModelHelper {
 	
+	
 	public static String json(Model x) {
 		try {
 			return getMapper().writeValueAsString(x);
