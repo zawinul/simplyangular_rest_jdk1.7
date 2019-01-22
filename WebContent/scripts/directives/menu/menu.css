@@ -1,0 +1,84 @@
+.dashboard .menu {
+	padding: 8px;
+}
+
+.dashboard .menu .voce {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #e8e8ff;
+	margin: 2px;
+	padding: 2px 6px;
+	cursor: pointer;
+}
+.dashboard .menu .voce:hover {
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.dashboard .menu .voce.current {
+	color: white;
+	background-color: #668;
+}
+.dashboard .menu sezione>.titolo {
+	width: 100%;
+	border-radius: 5px;
+	padding: 2px 6px;
+	position: relative;
+	color: #505050; 
+	margin: 4px 2px 2px 2px;
+	/*background-color: #d8d8ff;*/
+	cursor: pointer;
+}
+.dashboard .menu sezione>.titolo:hover {
+	background-color: #ffffff;
+}
+
+/*
+.dashboard .menu .titolo>.fa {
+    color: #808080;
+    position: absolute;
+    top: 6px;
+	right: 7px;
+	float: left;
+    font-size: 8px;
+}
+*/
+.dashboard .menu .titolo>.fa {
+    color: #808080;
+    float: left;
+    font-size: 8px;
+    position: relative;
+    top: 7px;
+    left: -2px;
+    margin-right: 3px;
+}
+ 
+.dashboard sezione>.titolo>.fa-plus {
+	display: none;
+}
+.dashboard sezione>.titolo>.fa-minus {
+	display: block;
+}
+.dashboard sezione.chiusa>.titolo>.fa-plus {
+	display: block;
+}
+.dashboard sezione.chiusa>.titolo>.fa-minus {
+	display: none;
+}
+
+sezione .sottomenu {
+	height: auto;
+	overflow: hidden;
+}
+
+.dashboard .menu .voce a {
+	color: #303050;
+}
+
+.dashboard .sottomenu {
+	padding-left: 16px;
+}
+
+sezione.chiusa > .sottomenu {
+	height: 1px;
+}

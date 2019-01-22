@@ -1,0 +1,24 @@
+.dashboard .sidebar {
+	padding: 8px;
+}
+
+.dashboard .sidebar .voce {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #e8e8ff;
+	margin: 2px;
+	padding: 2px 6px;
+}
+
+.dashboard .sidebar .voce.section {
+	color: #505050; 
+	background-color: #d8d8ff;
+}
+
+.dashboard .sidebar .voce a {
+	color: #303050;
+}
+
+.dashboard .submenu {
+	padding-left: 10px;
+}

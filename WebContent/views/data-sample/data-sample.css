@@ -1,0 +1,23 @@
+.data-sample {
+  background-color: white;
+  padding: 20px;
+}
+.data-sample .edit-form {
+  width: 700px;
+  border: 3px double gray;
+  padding: 4px;
+}
+.data-sample .edit-form input {
+  width: 170px;
+}
+.data-sample .edit-form button {
+  width: 80px;
+}
+.data-sample .edit-form .form-group {
+  margin: 10px;
+  width: 300px;
+}
+.data-sample .edit-form .form-group label {
+  width: 75px;
+  text-align: right;
+}

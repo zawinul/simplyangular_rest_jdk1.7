@@ -1,0 +1,72 @@
+<div class="data-sample">
+	<h1>
+		{{msg}}
+		<button class="btn btn-primary" ng-click="getData()">getData</button>
+	</h1>
+	
+	<table ng-show="data!=null" class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>nome</th>
+				<th>cognome</th>
+				<th>città</th>
+				<th>età</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in data">
+				<td>{{x.id}}</td>
+				<td>{{x.nome}}</td>
+				<td>{{x.cognome}}</td>
+				<td>{{x.citta}}</td>
+				<td>{{x.eta}}</td>
+				<td>
+					<button ng-click="editItem(x)">edit</button>
+					<button ng-click="deleteItem(x)">delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<div>
+		<a href="#" ng-click="newItem()">crea</a>
+	</div>
+	
+	<div class="container edit-form" ng-hide="!currObj">
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Id:</label>
+				<input type="text" class="form-control" ng-hide="currObj.id == -1" ng-readonly="true" ng-model="currObj.id">
+			</div>
+
+			<div class="form-group">
+				<label>Nome:</label>
+				<input type="text" class="form-control" ng-model="currObj.nome">
+			</div>
+
+			<div class="form-group">
+				<label>Cognome:</label>
+				<input type="text" class="form-control" ng-model="currObj.cognome">
+			</div>
+
+			<div class="form-group">
+				<label>Città:</label>
+				<input type="text" class="form-control" ng-model="currObj.citta">
+			</div>
+
+			<div class="form-group">
+				<label>Età:</label>
+				<input type="number" class="form-control" ng-model="currObj.eta">
+			</div>
+
+			<div class="form-group">
+				<label></label>
+				<button type="submit" class="btn btn-default" ng-click="chiudiForm()">Cancel</button>
+				<button type="submit" class="btn btn-primary" ng-click="invia()">OK</button>
+			</div>
+		</form>
+	</div>
+
+</div>

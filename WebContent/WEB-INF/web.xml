@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>it.eng.fs.jm2,it.eng.sa.rest,it.eng.sa.web</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jersey Web Application</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>UploadServlet</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>it.eng.sa.web.upload.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/upload/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>Download</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>it.eng.sa.web.download.DownloadServlet
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/download/*</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>it.eng.sa.web.ApplicationManager$ContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>it.eng.sa.web.SessionManager$SessionListener</listener-class>
+  </listener>
+</web-app>

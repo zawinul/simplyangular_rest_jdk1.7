@@ -1,0 +1,23 @@
+<div class="news">
+	<h1>
+		{{msg}}
+	</h1>
+	
+	<table ng-show="data!=null" class="table table-striped table-bordered table-hover">
+		<tbody>
+			<tr ng-repeat="x in data">
+				<td class="imgcell">
+					<img ng-src="{{x.urlToImage}}" ng-show="{{x.urlToImage}}">
+					<div ng-show="{{!x.urlToImage}}">immagine non presente</div>
+				</td>
+				<td class="newscell">
+					<div class="source">{{x.source.name}}</div>
+					<div class="title">{{x.title}}</div>
+					<div class="content">{{x.content}}</div>
+					<div class="link"><a ng-href="{{x.url}}">leggi...</a></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

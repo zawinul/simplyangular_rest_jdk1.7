@@ -1,0 +1,27 @@
+html,body {
+	width: 100%;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	background: url(../styles/bodybg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:#303040; 
+
+} 
+
+.login-view {
+	width: 100%;
+	text-align: center;
+}
+
+.login-view input {
+	padding: 4px;
+}
+.login-view titolo {
+	margin-top:12px;
+}
+.login-view button {
+	margin:20px;
+	padding: 4px 12px; 
+	border-radius: 3px;
+}

@@ -1,0 +1,25 @@
+.news {
+  background-color: white;
+  padding: 20px;
+}
+.news .imgcell {
+  width: 12%;
+}
+.news .imgcell img {
+  max-width: 200px;
+}
+.news .newscell {
+  width: 87%;
+}
+.news .newscell .source {
+  color: #004000;
+}
+.news .newscell .title {
+  font-weight: bold;
+}
+.news .newscell .content {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.news .newscell .link {
+  color: #0000a0;
+}
